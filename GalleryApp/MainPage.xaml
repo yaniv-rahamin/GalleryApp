@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="GalleryApp.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <ScrollView>
+
+        <VerticalStackLayout Padding="30,0" Spacing="25">
+            <Button
+                x:Name="upBtn"
+                BackgroundColor="Transparent"
+                Clicked="upBtn_Clicked"
+                FontFamily="Icon"
+                FontSize="40"
+                Pressed="upBtn_Pressed"
+                Released="upBtn_Released"
+                Text=" &#xe5c7;"
+                TextColor="Black"
+                HorizontalOptions="Center"/>
+            <Border
+            Stroke="CornflowerBlue"
+            StrokeThickness="10"
+            WidthRequest="300"
+            HeightRequest="300"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            BackgroundColor="Transparent"
+            StrokeShape="Ellipse"
+                Background="AliceBlue">
+              
+                              
+                <Image
+                    x:Name="img"
+                    Aspect="AspectFit"
+                    HeightRequest="185"
+                    SemanticProperties.Description="dot net bot in a race car number eight"
+                    Source="a1"
+                   HorizontalOptions="Center"
+                    
+                    >
+                    <Image.GestureRecognizers>
+                        <SwipeGestureRecognizer Direction="Left" Swiped="SwipeGestureRecognizer_Swiped_Left" />
+                        <SwipeGestureRecognizer Direction="Right" Swiped="SwipeGestureRecognizer_Swiped_Right" />
+                    </Image.GestureRecognizers>
+
+
+                </Image>
+            </Border>
+            <Button
+                x:Name="downBtn"
+                BackgroundColor="Transparent"
+                Clicked="downBtn_Clicked"
+                FontFamily="Icon"
+                FontSize="40"
+                Pressed="downBtn_Pressed"
+                Released="downBtn_Released"
+                Text=" &#xe5c5;"
+                TextColor="Black"
+                Background="Transparent"
+                HorizontalOptions="Center"/>
+               
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -57,10 +57,7 @@
 
         private void SwipeGestureRecognizer_Swiped_Left(object sender, SwipedEventArgs e)
         {
-            count--;
-            if (count < 0)
-                count = 15;
-            img.Source = list[count];
+
         }
 
         private void SwipeGestureRecognizer_Swiped_Right(object sender, SwipedEventArgs e)

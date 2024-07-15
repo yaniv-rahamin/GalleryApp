@@ -52,7 +52,7 @@
                 BackgroundColor="Transparent"
                 Clicked="downBtn_Clicked"
                 FontFamily="Icon"
-                FontSize="40"
+                FontSize="30"
                 Pressed="downBtn_Pressed"
                 Released="downBtn_Released"
                 Text=" &#xe5c5;"

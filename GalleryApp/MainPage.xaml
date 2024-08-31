@@ -9,7 +9,7 @@
         <VerticalStackLayout Padding="30,0" Spacing="25">
             <Button
                 x:Name="upBtn"
-                BackgroundColor="Transparent"
+                
                 Clicked="upBtn_Clicked"
                 FontFamily="Icon"
                 FontSize="40"

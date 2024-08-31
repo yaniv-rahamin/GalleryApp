@@ -10,14 +10,15 @@ namespace GalleryApp;
 
 public partial class DynamicControls : ContentPage
 {
-    List<string> list;
-    int count;
-    Image img;
+    private List<string> list;
+    private int count=0;
+    private Image img;
 
     public DynamicControls()
 	{
 		InitializeComponent();
         count = 0;
+        img = new Image();
         list = new List<string>()
             {
                 "a1","a2","a3","a4","a5","a6","a7","a8","a9", "a10","a11","a12","a13","a14","a15","a16",
@@ -31,6 +32,9 @@ public partial class DynamicControls : ContentPage
 
     private void InitView()
     {
+        StackLayout stackLayout=new StackLayout();
+        page.AddLogicalChild(stackLayout);
+
         Button btnUp = new Button()
         {
             Text = "\ue5c7",
@@ -63,22 +67,21 @@ public partial class DynamicControls : ContentPage
  
 
         };
-        img = new Image()
-        {
-            Aspect = Aspect.AspectFit,
-            HeightRequest = 185,
-            HorizontalOptions = LayoutOptions.Center,
-            Source = "a1.jpeg",
-        };
+
+        img.Aspect = Aspect.AspectFit;
+        img.HeightRequest = 185;
+        img.HorizontalOptions = LayoutOptions.Center;
+        img.Source = "a1.jpeg";
+        
 
         borderImg.Content= img; 
 
         btnUp.Clicked += BtnUp_Clicked;
         btnDown.Clicked += BtnDown_Clicked;
 
-        MainStackLayout.Children.Add(btnUp);
-        MainStackLayout.Children.Add(borderImg);
-        MainStackLayout.Children.Add(btnDown);
+        stackLayout.Children.Add(btnUp);
+        stackLayout.Children.Add(borderImg);
+        stackLayout.Children.Add(btnDown);
 
     }
              
